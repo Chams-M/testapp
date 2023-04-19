@@ -143,6 +143,7 @@ export const LoginGhostButton = styled.button`
   text-transform: uppercase;
 `;
 
+
 export const OverlayContainer = styled.div`
   position: absolute;
   top: 0;
@@ -155,6 +156,8 @@ export const OverlayContainer = styled.div`
   ${(props) =>
     props.signinIn !== true ? `transform: translateX(-100%);` : null}
 `;
+
+
 
 export const Overlay = styled.div`
   background-repeat: no-repeat;
@@ -170,6 +173,9 @@ export const Overlay = styled.div`
   ${(props) => (props.signinIn !== true ? `transform: translateX(50%);` : null)}
 `;
 
+
+
+
 export const OverlayPanel = styled.div`
   position: absolute;
   display: flex;
@@ -184,6 +190,8 @@ export const OverlayPanel = styled.div`
   transform: translateX(0);
   transition: transform 0.6s ease-in-out;
 `;
+
+
 
 /********** Overlay component that redirect  you to signup page **********/
 
@@ -217,6 +225,8 @@ export const RightOverlayPanel = styled(OverlayPanel)`
   ${(props) => (props.signinIn !== true ? `transform: translateX(20%);` : null)}
 `;
 
+
+
 export const Paragraph = styled.p`
   font-size: 14px;
   font-weight: 100;
@@ -239,6 +249,7 @@ export const FormLabel = styled.p`
   margin: 0;
 `;
 
+
 export const FormContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -246,17 +257,22 @@ export const FormContainer = styled.div`
   padding-bottom: 10px;
 `;
 
+
+
 export const FormGrid = styled.div`
   display: grid;
   grid-template-columns: 300px 300px;
   padding-top: 20px;
 `;
 
+
 export const AgreeContainer = styled.div`
   margin-left: 90px;
   margin-top: 20px;
   color: black;
 `;
+
+
 
 export const SignupContent = styled.div`
   padding-left: 70px;
