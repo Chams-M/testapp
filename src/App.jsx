@@ -8,9 +8,9 @@ import {
   TextField,
 } from "@mui/material";
 
-import {GoogleIcon} from "@mui/icons-material/Google";
+import GoogleIcon from "@mui/icons-material/Google";
 
-import {FacebookIcon} from "@mui/icons-material/Facebook";
+import FacebookIcon from "@mui/icons-material/Facebook";
 
 
 function App() {
