@@ -1,0 +1,9 @@
+body{
+    background-color: #F5F5F5;
+}
+.dashboardlayout{
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 18rem 80rem;
+        overflow: hidden;
+}

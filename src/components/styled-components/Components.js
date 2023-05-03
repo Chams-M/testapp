@@ -1,11 +1,11 @@
 import styled from "styled-components";
-import signup from "./assets/images/signup.png";
-import login from "./assets/images/login.png";
+import signup from "../../assets/images/signup.png";
+import login from "../../assets/images/login.png";
 
 export const UpperContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: 90px;
+  margin-top: 50px;
   margin-left: 90px;
 `;
 
@@ -50,7 +50,7 @@ export const SignInContainer = styled.div`
 `;
 
 export const Form = styled.form`
-  margin-top: 40px;
+  margin-top: 20px;
   margin-left: 40px;
   background-color: #ffffff;
   display: flex;
@@ -92,17 +92,13 @@ export const OverlayParagraph = styled.div`
 
 export const Input = styled.input`
   background-color: #eee;
-  border: 1px;
-  padding: 12px 15px;
-  margin: 8px 0;
+  
   width: 100%;
 `;
 
 export const FormInput = styled.input`
   background-color: #eee;
   border-bottom: 1px;
-  padding: 12px 15px;
-  margin: 8px 0;
   width: 100%;
 `;
 
@@ -112,7 +108,7 @@ export const Button = styled.button`
   font-size: 12px;
   font-weight: bold;
   padding: 12px 45px;
-  margin-top: 80px;
+  margin-top: 40px;
   margin-left: 280px;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -125,12 +121,18 @@ export const Button = styled.button`
   }
 `;
 
+
+
+/*************** OverLaay  CSS ***************/
+
+
 export const GhostButton = styled.button`
   background-color: transparent;
   border-color: #ffffff;
   color: white;
   margin-top: 50px;
 `;
+
 
 export const LoginGhostButton = styled.button`
   background-color: transparent;
@@ -171,6 +173,7 @@ export const Overlay = styled.div`
   transform: translateX(0);
   transition: transform 0.6s ease-in-out;
   ${(props) => (props.signinIn !== true ? `transform: translateX(50%);` : null)}
+
 `;
 
 
@@ -226,6 +229,7 @@ export const RightOverlayPanel = styled(OverlayPanel)`
 `;
 
 
+/********** Paragraphs & Texts  ************/
 
 export const Paragraph = styled.p`
   font-size: 14px;
@@ -247,6 +251,8 @@ export const CheckboxParagraph = styled.p`
 export const FormLabel = styled.p`
   text-align: left;
   margin: 0;
+  padding-bottom:15px;
+  padding-top:10px;
 `;
 
 
@@ -254,26 +260,34 @@ export const FormContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 200px;
-  padding-bottom: 10px;
+  margin-bottom:10px;
 `;
 
-
+export const Container = styled.div`
+`;
 
 export const FormGrid = styled.div`
   display: grid;
   grid-template-columns: 300px 300px;
-  padding-top: 20px;
 `;
 
 
 export const AgreeContainer = styled.div`
   margin-left: 90px;
-  margin-top: 20px;
+  margin-top: 50px;
   color: black;
+  font-size:1rem;
 `;
-
 
 
 export const SignupContent = styled.div`
   padding-left: 70px;
+  padding-top:20px;
+`;
+
+
+export const AgreeContainerItem = styled.div`
+display:flex; 
+flex-direction:row;
+
 `;

@@ -1,0 +1,35 @@
+.formlabel{
+    
+    margin-right:100%;
+}
+.eyeicon{
+    font-size: 50px;
+}
+.textlink{
+  font-size: 14px;
+  font-weight: 100;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  margin: 20px 0 30px;
+  color: black;
+}
+.textlink:hover{
+    color: #9e7889;
+
+}
+
+.Ldropdown{
+border:none;   
+}
+.agreelink{
+    color:#6596c8;
+}
+.agreelink:Hover{
+    color:#166bc1;
+}
+.form-textfield{
+    color:red;
+}
+.agreecontainer-text{
+    font-size: 12px;
+}
