@@ -2,16 +2,26 @@
 
 import React from "react";
 import SideBar from "../../components/Sidebar/Sidebar";
-import { AppBar } from "@mui/material";
 import Navbar from "./Navbar";
-import Appbar from "../../components/Appbar/Appbar";
+import MainContainer from "./MainContainer/MainContainer";
+import './dashboard.css';
 
 function Dashboard (){
 
     return (
         <div className="dashboardlayout">
-            <Navbar/>
+            <div> 
             <SideBar/>
+            </div>
+            <div>
+            <Navbar/>
+            <div>
+            <MainContainer className="main-container"/>
+           </div>
+            
+            </div>
+           
+            
         </div>
     );
 

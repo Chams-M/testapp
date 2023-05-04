@@ -1,13 +1,14 @@
 import React from 'react';
 import './sidebar.css';
 import { SidebarData } from '../../constants/data';
+import { Button } from '@mui/material';
 
 
 const SideBar = () => {
   return (
     <div className="sidenav">
    <div className="menu">
-   {SidebarData.map((item,index)=>{
+   {SidebarData.map(item => {
       return (
         <div className="menuItem">
           <item.icon/>
@@ -19,5 +20,4 @@ const SideBar = () => {
      </div>
   )
 }
-
 export default SideBar

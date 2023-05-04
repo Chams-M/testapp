@@ -7,3 +7,18 @@ body{
         grid-template-columns: 18rem 80rem;
         overflow: hidden;
 }
+.AppBar{
+    background-color: #ff0000;/* Change to your desired color */
+  }
+
+#appbar-item{
+    color:#7B5D6B;
+}
+#myAppBar{
+    background-color: #FFFFFF;
+}
+.main-container{
+    background-color: #7B5D6B;
+    height: 100vh;
+    width:100vw;
+}

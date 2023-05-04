@@ -7,7 +7,7 @@ import DashboardLayout from "./layouts/Dashboard/dashboard-layout";
 
 function App() {
   return (
-    <DashboardLayout/>
+    <Dashboard/>
   );
 }
 
