@@ -13,10 +13,10 @@ import MenuItem from '@mui/material/MenuItem';
 import Image from '../../assets/images/login.png'
 import './dashboard.css';
 import NotificationsIcon from '@mui/icons-material/Notifications';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
-
-const pages = ['Buy', 'Sell', 'Invest','About','Dashboard'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const pages = ['Buy','Sell','Invest','About','Dashboard'];
+const settings = ['Profile','Account','Dashboard','Logout'];
 
 function Navbar() {
 
@@ -33,15 +33,11 @@ function Navbar() {
 
   return (
     <AppBar 
-    sx={{
-      color:"white",
-      boxShadow:"none"
-    }}
     id="myAppBar" color="primary" position="fixed">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
         <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            <div className='appbar'>
+            <div className='leftside-appbar'>
               <Button
                 id="appbar-item"
               >
@@ -58,7 +54,7 @@ function Navbar() {
                 Invest
               </Button>
               </div>
-              <div className='appbar'>
+              <div className='rightside-appbar'>
               <Button
                 id="appbar-item"
               >
@@ -69,22 +65,22 @@ function Navbar() {
               >
                 Dashboard
               </Button>
-              <Button
-               id="appbar-item"
-              >
-                  <NotificationsIcon sx={{
-                    color:"#7B5D6B",
-                  }}/>
-              
+              <Button>
+                  <NotificationsIcon className='notifications-icon'/>
               </Button>
               </div>
-
           </Box>
           {/******Menuu****/}
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
               <Avatar alt="Remy Sharp" src={Image}/>
+              <span className='userName'>Chams Moumni</span>
+              <IconButton>
+                  <KeyboardArrowDownIcon sx={{
+                    color:'#7B5D6B'
+                  }}/>
+              </IconButton>
               </IconButton>
             </Tooltip>
             <Menu

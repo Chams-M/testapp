@@ -5,8 +5,10 @@
   import EngineeringIcon from '@mui/icons-material/Engineering';
   import PaymentIcon from '@mui/icons-material/Payment';
   import LogoutIcon from '@mui/icons-material/Logout';
-  
-  
+  import WbSunnyIcon from '@mui/icons-material/WbSunny';
+  import DarkModeIcon from '@mui/icons-material/DarkMode';
+  import CircleIcon from '@mui/icons-material/Circle';
+
   export const SidebarData = [
 
       {
@@ -41,6 +43,13 @@
     },
   
   ];
+
+export const themeToggle=[
+{
+    light:WbSunnyIcon,
+    dark:CircleIcon,
+}
+]
   
   //user Data
   

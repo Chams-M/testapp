@@ -7,18 +7,56 @@ body{
         grid-template-columns: 18rem 80rem;
         overflow: hidden;
 }
-.AppBar{
-    background-color: #ff0000;/* Change to your desired color */
-  }
 
+
+
+/********** AppBar Style *********/
+
+
+.AppBar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+#myAppBar{
+    background-color: white;
+    box-shadow: none;
+}
+.rightside-appbar{
+    margin-left: auto;
+}
+.leftside-appbar{
+    margin-right: auto;
+}
 #appbar-item{
     color:#7B5D6B;
 }
-#myAppBar{
-    background-color: #FFFFFF;
+#appbar-item:hover{
+    background-color: #7b5d6b1a;
 }
+
+
+@media screen and (max-width: 768px) {
+    .Appbar {
+      flex-direction: column; /* Stacks the child divs vertically */
+      height: auto; /* Automatically adjusts the height based on content */
+    }
+}
+
 .main-container{
-    background-color: #7B5D6B;
     height: 100vh;
     width:100vw;
+}
+
+.userName{
+    color: #7B5D6B;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left:10px;
+}
+
+.notifications-icon{
+    color: #7B5D6B;
 }

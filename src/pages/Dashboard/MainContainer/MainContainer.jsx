@@ -1,5 +1,6 @@
 import React from "react";
 import '../dashboard.css';
+import PerformanceSection from "../../../components/Dashboard/UserPerformance/performance_section";
 
 function MainContainer (){
 
