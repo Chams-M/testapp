@@ -1,0 +1,30 @@
+.actions-card{
+display: flex;
+flex-direction: row;
+text-align: center;
+margin-left: 50px;
+margin-top: 30px;
+}
+.actions-item{
+display: flex;
+flex-direction: column;
+gap:0;
+border-radius: 4px;
+height:150px;
+width:150px;
+margin-right:10px;
+}
+.actions-item-title{
+    color:rgba(61, 93, 126, 1);
+    margin: 0;
+}
+.actions-icon{
+    margin-top: 20px;
+}
+.actions-data{
+    font-weight: 600;
+    font-size: 18px;
+    color:rgba(61, 93, 126, 1);
+    margin:0;
+    margin-top: 3px;
+}
