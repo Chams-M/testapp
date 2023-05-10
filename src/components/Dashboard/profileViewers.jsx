@@ -1,44 +1,35 @@
 import { Card } from "@mui/material";
 import React from "react";
 import "./cards_style.css";
+import ProposalsIcon from "../../assets/svg/ProposalsIcon";
+
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
+
 
 export default function ProfileViewers(){
+    
+    const chartData = [
+        { name: 'Mon', sales: 50 },
+        { name: 'Tue', sales: 100 },
+        { name: 'Wed', sales: 80 },
+        { name: 'Thu', sales: 70 },
+        { name: 'Fri', sales: 90 },
+        { name: 'Sat', sales: 120 },
+        { name: 'Sun', sales: 150 },
+      ];
+      
 return (
-    <div className="actions-card">
-        <Card className="actions-item" style={{backgroundColor:"rgba(255, 191, 193, 0.3)"}}>
-        <div>
-        hi
-        </div>
-        <div>
-            <p>18</p>
-        </div>
-        <div>
-            <ProposalsIcon/>
-        </div>
-        </Card>
-        <Card className="actions-item" style={{backgroundColor:"rgba(130, 212, 130, 0.3)"}} >
-        <div>
-        hii
-        </div>
-        <div>
-        <p>56</p>
-        </div>
-        <div>
-        hii
-        </div>
-        </Card>
-        <Card className="actions-item" style={{backgroundColor:"rgba(209, 182, 234, 0.3)"}} >
-        <div>
-        logo
-        </div>
-        <div>
-            <p>$1000.0</p>
-        </div>
-        <div>
-            Payments
-        </div>
-        </Card>
-    </div>
+<div className="views-chart">
+<BarChart width={500} height={250} data={chartData} >
+  <CartesianGrid opacity={0}   
+    />
+  <XAxis dataKey="name" />
+  <YAxis/>
+  <Tooltip />
+  <Legend />
+  <Bar dataKey="sales" fill="#87B4E0" />
+</BarChart>
+</div>
 );
 
 }

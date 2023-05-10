@@ -91,3 +91,18 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.apexcharts-legend.apx-legend-position-right{
+  display: none;
+}
+#apexcharts5szytlmg{
+  width:350px;
+  height:600px;
+}
+#apexchartsoqpfyanl{
+  width:350px;
+  height:600px;
+}
+.MuiPaper-root.MuiPaper-elevation{
+margin-top:0px;
+}

@@ -12,7 +12,9 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import Image from '../../assets/images/login.png'
 import './dashboard.css';
-import NotificationsIcon from '@mui/icons-material/Notifications';
+import { Logo } from '../../assets/svg/Logo';
+import { NotificationsIcon } from '../../assets/svg/NotificationsIcon';
+//import NotificationsIcon from '@mui/icons-material/Notifications';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 const pages = ['Buy','Sell','Invest','About','Dashboard'];
@@ -53,6 +55,7 @@ function Navbar() {
               >
                 Invest
               </Button>
+              <Logo className="logo"/>
               </div>
               <div className='rightside-appbar'>
               <Button

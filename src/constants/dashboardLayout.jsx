@@ -11,15 +11,15 @@ export const dashboardLayout = [
     },
     {
       title: 'Profile Viewers',
-      data: 'This is the content of card 2',
+      data: <ProfileViewers/>,
     },
     {
       title: 'Invest Summary',
-      data: 'This is the content of card 3',
+      data: <InvestSummary/>,
     },
     {
       title: 'Proposals Summary',
-      data: 'This is the content of card 3',
+      data: <ProposalsSummary/>,
     },
   ];
   

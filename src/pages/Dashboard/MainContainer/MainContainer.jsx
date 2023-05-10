@@ -9,6 +9,7 @@ import { dashboardLayout } from "../../../constants/dashboardLayout";
 function MainContainer (){
 
     return (
+    <div>
         <Grid style={{marginLeft:"15px",marginTop:"65px"}} container spacing={3}>
             {dashboardLayout.map((card) => (
             <Grid item xs={12} sm={6} md={6} key={card.title}>
@@ -20,8 +21,11 @@ function MainContainer (){
             </Card>
          </Grid> 
   ))}
-  
 </Grid>
+<div>
+<PerformanceSection className="performance-section"/>
+</div>
+</div>
     );
 }
 

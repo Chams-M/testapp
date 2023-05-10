@@ -16,6 +16,16 @@ function Heatmap() {
       count: heatmap[index]
     };
   });
+  const modifiedData = [];
+  data.forEach((entry) => {
+    modifiedData.push(entry);
+    const date = new Date(entry.date);
+    const lastDayOfMonth = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
+    if (date.getDate() === lastDayOfMonth) {
+      // Insert null or empty data entry to create space
+      modifiedData.push(null);
+    }
+  });
   return (
     <div>
       <CalendarHeatmap
@@ -37,7 +47,7 @@ function Heatmap() {
             } submissions on ${value.date.toString().slice(4, 15)}`
           };
         }}
-        showWeekdayLabels={false}
+        showWeekdayLabels={true}
       />
       <ReactTooltip />
     </div>

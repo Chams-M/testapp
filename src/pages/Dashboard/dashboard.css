@@ -8,16 +8,16 @@ body{
         overflow: hidden;
 }
 
-
 /********** AppBar Style *********/
 
-
+.logo{
+    margin-left: 400px;
+}
 .AppBar{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    
 }
 #myAppBar{
     background-color: white;
@@ -64,7 +64,7 @@ body{
 .card-container{
     height:300px;
     width:100%;
-    border-radius: 12px;
+    border-radius: 50px;
     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.05);
 }
 
