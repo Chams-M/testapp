@@ -4,33 +4,24 @@ import "../cards_style.css";
 import  PaymentsIcon  from "../../../assets/svg/PaymentsIcon";
 import ProposalsIcon from "../../../assets/svg/ProposalsIcon";
 import PropertiesIcon from "../../../assets/svg/PropertiesIcon";
-
+import { DonutChart } from "../../../pages/Dashboard/Investments/components/donutChart";
 export default function NbofInvestments(){
 return (
-    
-    <div className="actions-card">
-        <Card className="actions-item" style={{backgroundColor:"rgba(255, 191, 193, 0.3)"}}>
-        <div className="actions-icon">
-        <PropertiesIcon/>
+    <div className="nbofinvestments-card">
+    <div className="nbofinvestments-donutchart">
+     <div className="donutchart-label-investments">
+            <p className="donutchart-total">18</p>
+            <p className="donutchart-title">Properties</p>
         </div>
-            <p className="actions-data">18</p>
-            <p className="actions-item-title">Properties</p>
-        </Card>
-        <Card className="actions-item" style={{backgroundColor:"rgba(130, 212, 130, 0.3)"}} >
-        <div className="actions-icon">
-        <ProposalsIcon/>
-        </div>
-        <p className="actions-data">56</p>
-        <p className="actions-item-title">Proposals</p>
-        </Card>
-        <Card className="actions-item" style={{backgroundColor:"rgba(209, 182, 234, 0.3)"}} >
-        <div className="actions-icon">
-        <PaymentsIcon/>
-        </div>
-            <p className="actions-data">$1000.0</p>
-            <p className="actions-item-title">Payments</p>
-        </Card>
+      <DonutChart donutColors="#87B4E0" donutLabels="properties"/>
+    </div>
+    <div 
+    style={{
+        marginLeft:'45px',
+        fontWeight:'300',
+        paddingBottom:'10px'
+    }}
+    >Out of 1,2345 properties</div>
     </div>
 );
-
 }

@@ -15,12 +15,12 @@ const rows = [
     { field: 'col2', headerName: 'Column 2', width: 150 },
   ];
 
-function ServiceContainer (){
+function InvestmentsContainer (){
     return (
     <div>
         <Grid style={{marginLeft:"15px",marginTop:"65px"}} container spacing={3}>
             {investmentsLayout.map((card) => (
-            <Grid item xs={12} sm={6} md={6} key={card.title}>
+            <Grid item xs={12} sm={4} md={4} key={card.title}>
             <Card className="card-container">
                 <CardContent>
                 <h2 className="card-title">{card.title}</h2>
@@ -34,8 +34,12 @@ function ServiceContainer (){
 {/* change it to have dynamic size of rows and columns */}
 <DashboardList rows={rows} columns={columns} label={"Properties"}/>
 </div>
+<div>
+{/* change it to have dynamic size of rows and columns */}
+<DashboardList rows={rows} columns={columns} label={"Properties"}/>
+</div>
 </div>
     );
 }
 
-export default ServiceContainer;
+export default InvestmentsContainer;

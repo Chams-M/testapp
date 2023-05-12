@@ -11,27 +11,8 @@ export default function PropertiesInvested(){
 return (
     
     <div className="actions-card">
-        <Card className="actions-item" style={{backgroundColor:"rgba(255, 191, 193, 0.3)"}}>
-        <div className="actions-icon">
-        <PropertiesIcon/>
-        </div>
-            <p className="actions-data">18</p>
-            <p className="actions-item-title">Properties</p>
-        </Card>
-        <Card className="actions-item" style={{backgroundColor:"rgba(130, 212, 130, 0.3)"}} >
-        <div className="actions-icon">
-        <ProposalsIcon/>
-        </div>
-        <p className="actions-data">56</p>
-        <p className="actions-item-title">Proposals</p>
-        </Card>
-        <Card className="actions-item" style={{backgroundColor:"rgba(209, 182, 234, 0.3)"}} >
-        <div className="actions-icon">
-        <PaymentsIcon/>
-        </div>
-            <p className="actions-data">$1000.0</p>
-            <p className="actions-item-title">Payments</p>
-        </Card>
+        
+    
     </div>
 );
 

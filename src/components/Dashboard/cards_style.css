@@ -37,6 +37,12 @@ width:50%;
 
 
 /******* Donut Chart ******/ 
+.donutchart-label-investments{
+    position: absolute;
+    color: rgba(61, 93, 126, 1);
+    top:25px;
+    left:75px;
+}
 .donutchart-label{
 position: absolute;
 color: rgba(61, 93, 126, 1);
@@ -56,6 +62,51 @@ font-size: 20px;
 margin:0px;
 }
 .summary-card{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+
+/********* Service Line Chart ***********/
+
+.service-linechart-card{
+display: flex;
+justify-content: space-between;
+}
+
+.linechart-filters-btn{
+margin-left: auto;
+}
+
+
+.service-projects-card{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    margin-left: 3%;
+}
+.service-numbers{
+    margin-top: 20px;
+}
+.service-numbers p{
+   color: #464F56;
+   font-size: 10px;
+   margin: 17px;
+
+}
+
+
+
+/************ Investments Section ***********/
+
+.sellinvestments-content{
+margin: 20px;
+}
+.nbofinvestments-card{
+ margin-left: 55px;
+}
+.nbofinvestments-donutchart{
     position: relative;
     display: flex;
     flex-direction: row;

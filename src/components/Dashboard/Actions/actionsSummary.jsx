@@ -32,7 +32,8 @@ return (
             <p className="actions-data">$1000.0</p>
             <p className="actions-item-title">Payments</p>
         </Card>
-    </div>
+        </div>
+
 );
 
 }

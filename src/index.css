@@ -106,3 +106,20 @@ button:focus-visible {
 .MuiPaper-root.MuiPaper-elevation{
 margin-top:0px;
 }
+.apexcharts-menu-icon{
+  display: none;
+}
+.apexcharts-bar-area{
+  margin-bottom: 10px;
+}
+.apexcharts-series{
+  margin-bottom: 10px;
+}
+.apexcharts-legend.apexcharts-align-center.apx-legend-position-bottom {
+  display: none;
+}
+
+.MuiDataGrid-root.MuiDataGrid-cell{
+  color: 'red';
+  background-color: 'red';
+}

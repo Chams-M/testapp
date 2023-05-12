@@ -73,3 +73,31 @@ body{
     font-weight: 500;
     font-size: 18px;
 }
+
+
+/******* Service Section ******/
+
+.list-container{
+    background-color: #FFFFFF;
+    margin-left: 40px;
+    margin-top: 30px;
+    border-radius: 20px;
+    
+}
+.list-label{
+    background-color: #FFFFFF;
+    padding-top: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #3D5D7E;
+}
+.list-header{
+    display: flex;
+    justify-content: space-between;
+}
+#list-btn{
+    border-color: #3D5D7E;
+    margin-left: auto;
+    margin-right: 20px;
+    margin-top: 20px;
+}

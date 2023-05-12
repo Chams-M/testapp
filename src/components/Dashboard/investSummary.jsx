@@ -4,6 +4,7 @@ import ProposalsIcon from "../../assets/svg/ProposalsIcon";
 import ApexCharts from "apexcharts";
 import { DonutChart } from "../charts/donutChart";
 import {GroupBarChart} from "../charts/groupbarChart";
+
 export default function InvestSummary(){
     const colors=['#98DC98','#D2B7EB','#B5B8BB'];
     const labels=["Completed","Pending","Canceled"];
