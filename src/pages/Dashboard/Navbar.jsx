@@ -10,7 +10,7 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import Image from '../../assets/images/login.png'
+import Image from '../../assets/images/chamsmoumni.jpg'
 import './dashboard.css';
 import { Logo } from '../../assets/svg/Logo';
 import { NotificationsIcon } from '../../assets/svg/NotificationsIcon';

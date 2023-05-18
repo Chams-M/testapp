@@ -18,7 +18,6 @@ function InvestmentsPage (){
             <InvestmentsContainer className="main-container"/>
            </div>
             </div>
- 
         </div>
     );
 

@@ -11,7 +11,7 @@ export default function DashboardList(props) {
     <div className='list-container'>
     <div className='list-header'>
     <p className='list-label'>{props.label} List</p>
-    <CardButton title="Filters"/>
+    <CardButton id="" title="Filters"/>
 </div>
     <div style={{ height: '100%', width: '100%' }}>
       <DataGrid 
@@ -28,7 +28,6 @@ export default function DashboardList(props) {
        border: 'none',
     },
   }}
-      
       />
     </div>
     </div>

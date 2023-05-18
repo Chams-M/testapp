@@ -32,7 +32,11 @@ function ServiceContainer (){
             {serviceLayout.map((card) => (
             <Grid item xs={12} sm={6} md={6} key={card.title}>
             <Card className="card-container">
-                <CardContent>
+                <CardContent 
+                sx={{
+                  borderRadius:"20px"
+                }}
+                >
                 <h2 className="card-title">{card.title}</h2>
                 <p>{card.data}</p>
                 </CardContent>

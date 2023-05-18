@@ -3,16 +3,21 @@ import '../../Dashboard/dashboard.css';
 import { Grid, Card, CardContent } from '@mui/material';
 import { investmentsLayout } from "../../../constants/investmentsLayout";
 import DashboardList from "../../../components/Dashboard/dashboardList";
+import SimpleSlider from "../../../components/carousel";
 
 const rows = [
-    { id: 1, col1: 'Hello', col2: 'World' },
-    { id: 2, col1: 'DataGridPro', col2: 'is Awesome' },
-    { id: 3, col1: 'MUI', col2: 'is Amazing' },
+    { id: 1, col1: 'House', col2: 'Jamaica, New York' ,col3:'13/02/2023 8:25PM', col4:'$ 1.500.00', col5:'$ 1.750.00',col6:'Pending' },
+    { id: 2, col1: 'Appartement', col2: 'San Francisco, California' ,col3:'25/01/2023 4:32PM', col4:'$ 1.750.00', col5:'$ 1.650.00',col6:'Accepted' },
+    { id: 3, col1: 'Villa', col2: 'Bronx, New York' ,col3:'25/01/2023 4:32PM', col4:'$ 1.750.00', col5:'$ 1.850.00',col6:'Canceled'},
   ];
   
   const columns = [
-    { field: 'col1', headerName: 'Column 1', width: 150 },
-    { field: 'col2', headerName: 'Column 2', width: 150 },
+    { field: 'col1', headerName: 'Property type', width: 200 },
+    { field: 'col2', headerName: 'Location', width: 200},
+    { field: 'col3', headerName: 'Date and time', width: 200},
+    { field: 'col4', headerName: 'Amount', width: 200 },
+    { field: 'col5', headerName: 'Profit', width: 200 },
+    { field: 'col6', headerName: 'Status', width:200 },
   ];
 
 function InvestmentsContainer (){
@@ -30,13 +35,14 @@ function InvestmentsContainer (){
          </Grid> 
   ))}
 </Grid>
-<div>
+<div className="list-container">
+{/* <SimpleSlider/>*/}
 {/* change it to have dynamic size of rows and columns */}
 <DashboardList rows={rows} columns={columns} label={"Properties"}/>
+
 </div>
-<div>
-{/* change it to have dynamic size of rows and columns */}
-<DashboardList rows={rows} columns={columns} label={"Properties"}/>
+<div className="list-container">
+<DashboardList rows={rows} columns={columns} label={"Favorites"}/>
 </div>
 </div>
     );

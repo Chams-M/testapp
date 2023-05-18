@@ -14,7 +14,7 @@ return (
       height:'40px',
       fontFamily:'sans-serif'
     }}
-    endIcon={<KeyboardArrowDownIcon/>} >
+    endIcon={<KeyboardArrowDownIcon/>}>
      {props.title}
   </Button>
 );

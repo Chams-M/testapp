@@ -55,8 +55,8 @@ font-weight: 500;
 font-size: 30px;
 text-align: center;
 margin-bottom:0px;
-
 }
+
 .donutchart-title{
 font-size: 20px;
 margin:0px;
@@ -104,10 +104,33 @@ margin-left: auto;
 margin: 20px;
 }
 .nbofinvestments-card{
- margin-left: 55px;
+ margin-left: 65px;
 }
 .nbofinvestments-donutchart{
     position: relative;
     display: flex;
     flex-direction: row;
+}
+
+#get-seller-dashboard-btn:hover{
+background-color: rgba(210, 183, 235, 1);
+}
+
+    /*---- properties invested card ----*/
+
+.progressbar-data{
+    display: flex;
+    flex-direction: row;
+    gap:130px;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.properties-invested-card{
+    margin-left: 10px;
+    padding-bottom: 20px;
+}
+.property-type-label{
+    font-weight: 500;
+    font-size: 16px;
 }

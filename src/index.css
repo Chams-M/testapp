@@ -48,9 +48,7 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
   place-items: center;
-  min-width: 320px;
   min-height: 100vh;
 }
 
@@ -122,4 +120,7 @@ margin-top:0px;
 .MuiDataGrid-root.MuiDataGrid-cell{
   color: 'red';
   background-color: 'red';
+}
+.MuiPaper-root.css-bhp9pd-MuiPaper-root-MuiCard-root{
+border-radius: 12px;
 }

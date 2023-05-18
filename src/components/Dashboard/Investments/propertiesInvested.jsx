@@ -1,19 +1,38 @@
 import { Card } from "@mui/material";
 import React from "react";
 import "../cards_style.css";
-import  PaymentsIcon  from "../../../assets/svg/PaymentsIcon";
-import ProposalsIcon from "../../../assets/svg/ProposalsIcon";
-import PropertiesIcon from "../../../assets/svg/PropertiesIcon";
 //import {ReactComponent as PropertiesIcon} from "../../../assets/icons/PropertiesIcon.svg";
 //import {ReactComponent as PaymentsIcon} from "../../../assets/icons/PaymentsIcon.svg";
+import ProgressBar from "../../progressBar";
 
 export default function PropertiesInvested(){
 return (
-    
-    <div className="actions-card">
+    <div className="properties-invested-card">
+    <div>
+    <table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+  
+  <tr>
+    <td className="property-type-label">House</td>
+    <td><ProgressBar color="#D0B5E9" value="30"/></td>
+  </tr>
+  
+  <tr>
+    <td className="property-type-label">Land</td>
+    <td><ProgressBar color="#82D482" value="70" /></td>
+  </tr>
+  
+  <tr>
+    <td className="property-type-label">Villa</td>
+    <td><ProgressBar color="#F08F91" value="40" /></td>
+  </tr>
+</table>
+    </div>
         
-    
     </div>
 );
-
 }
