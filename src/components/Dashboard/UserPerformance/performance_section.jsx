@@ -5,10 +5,10 @@ import Heatmap from "./performanceCalendar";
 
 export default function PerformanceSection() {
   return (
-    <div style={{marginTop:"40%",marginLeft:"90px"}}>
-      <Card style={{height:"250px" , width:"70%"}}>
+    <div style={{marginLeft:"40px",marginTop:"20px"}}>
+      <Card style={{height:"250px" , width:"80%"}}>
         <div style={{ height: "20px", padding: "9px 20px 0px 12px" }}>
-          <div style={{ fontWeight: 600 }}>
+          <div style={{ fontWeight: "600" , }}>
             Performance
           </div>
         </div>

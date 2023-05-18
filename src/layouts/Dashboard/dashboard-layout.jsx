@@ -1,47 +1,41 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import Drawer from '@mui/material/Drawer';
-import AppBar from '@mui/material/AppBar';
-import CssBaseline from '@mui/material/CssBaseline';
-import Toolbar from '@mui/material/Toolbar';
-import List from '@mui/material/List';
-import Typography from '@mui/material/Typography';
-import Divider from '@mui/material/Divider';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
-import SideBar from '../../components/Sidebar/Sidebar';
+import React from "react";
 
-const drawerWidth = 240;
+import SideBar from "../../components/Sidebar/Sidebar";
+import Dashboard from "../../pages/Dashboard/Dashboard";
+import InvestmentsPage from "../../pages/Dashboard/Investments/InvestmentsPage";
+import ServiceContainer from "../../pages/Dashboard/Service/serviceContainer";
+import '../../pages/Dashboard/dashboard.css';
+import Navbar from "../../pages/Dashboard/Navbar";
+import MainContainer
+ from "../../pages/Dashboard/MainContainer/MainContainer";
+import {
+  Route , Routes, BrowserRouter
+} from "react-router-dom";
+import InvestmentsContainer from "../../pages/Dashboard/Investments/investmentsContainer";
+import ProfileContainer from "../../pages/Dashboard/profile";
 
 export default function DashboardLayout() {
   return (
-    <Box sx={{ display: 'flex' }}>
-      <CssBaseline />
-      <AppBar className="appbar" position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}>
-        <Toolbar>
-          <Typography variant="h6" noWrap component="div">
-            Propown Logo 
-            </Typography>
-        </Toolbar>
-      </AppBar>
-      <Drawer
-        variant="permanent"
-        sx={{
-          width: drawerWidth,
-          flexShrink: 0,
-          [`& .MuiDrawer-paper`]: { width: drawerWidth, boxSizing: 'border-box' },
-        }}
-      >
-      </Drawer>
-      {/****** Content here *****/}
-      <SideBar/>
-      <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
+      <BrowserRouter>
+      <div className="dashboardlayout">
+      <div>
+      <SideBar>
+      <Routes>
+        <Route path="/dashboard" element={<MainContainer/>} />
+            <Route path="/service" element={<ServiceContainer/>} />
+            <Route path="/investments" element={<InvestmentsContainer/>} />
+            <Route path="/email_generator" element={<InvestmentsContainer/>} />
+            <Route path="/profile" element={<ProfileContainer/>} />
+            <Route path="/payment_history" element={<InvestmentsContainer/>} />
+        </Routes>
+      </SideBar>
+      </div>
+      <div>
+            <Navbar/>
+            
+      </div>
       
-      </Box>
-    </Box>
+      </div>
+      </BrowserRouter>
   );
 }

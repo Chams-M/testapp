@@ -5,9 +5,8 @@ body{
         height: 100vh;
         display: grid;
         grid-template-columns: 18rem 80rem;
-        overflow: hidden;
+        overflow: auto;
 }
-
 /********** AppBar Style *********/
 
 .logo{
@@ -46,9 +45,10 @@ body{
 
 .main-container{
     height: 100vh;
-    width:100vw;
-    margin-left:100px;
-    background-color: red;
+    width:80vw;
+    position: absolute;
+    margin-left: 95%;
+    
 }
 
 .userName{
@@ -109,4 +109,29 @@ body{
 #list-btn:hover{
    background-color: rgba(210, 183, 235, 1);
    color: white;
+}
+
+
+/********* Profile Section **********/
+.profile-section{
+    display: flex;
+    flex-direction: row;
+    gap:20px;
+    margin-left: 40px;
+    margin-top: 5%;
+}
+
+.user-info{
+background-color: #FFFFFF;
+height:800px;
+width:400px;
+border-radius: 15px;
+box-shadow: 10px 5px 5px rgba(200, 194, 194, 0.239);
+}
+.user-data{
+background-color: #FFFFFF;
+height:800px;
+width:80%;
+border-radius: 15px;
+box-shadow: 10px 5px 5px rgba(200, 194, 194, 0.239);
 }

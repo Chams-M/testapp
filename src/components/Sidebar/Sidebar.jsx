@@ -1,5 +1,6 @@
 import React from 'react';
 import './sidebar.css';
+import '../../pages/Dashboard/dashboard.css'
 import { SidebarData , themeToggle} from '../../constants/data';
 import { IconButton } from '@mui/material';
 import {
@@ -7,33 +8,31 @@ import {
   Routes,
   Route,
   Link,
+  NavLink,
 } from 'react-router-dom';
 
 function doThis(){
   console.log("clicked")
 }
 
-const SideBar = () => {
+const SideBar = ({children}) => {
   return(   
     <div className="sidenav">
    <div className="menu">
    {SidebarData.map((item,index) => {
     if (index< SidebarData.length - 1){
       return(
-      /*** <div onClick={doThis}>
-    <div onClick={() => doThis()}> */
-        <div className="menuItem" onClick={doThis}>
+      <NavLink to={item.path} className="menuItem" >
           <item.icon/>
           <span>{item.heading}</span>
-        </div>
-  
+        </NavLink>
       );}
       else {
         return(
-        <div className='logout-btn' onClick={doThis}>
+          <NavLink to={item.path} className="logout-btn">
           <item.icon/>
           <span>{item.heading}</span>
-        </div> 
+        </NavLink>
         );}}
       )
     }
@@ -57,6 +56,7 @@ const SideBar = () => {
     </div>
    </div>
    <div className='divider'></div>
+   <main className='main-container'>{children}</main>
      </div>
   )
 }

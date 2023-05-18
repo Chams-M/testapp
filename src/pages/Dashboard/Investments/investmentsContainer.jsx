@@ -23,7 +23,7 @@ const rows = [
 function InvestmentsContainer (){
     return (
     <div>
-        <Grid style={{marginLeft:"15px",marginTop:"65px"}} container spacing={3}>
+        <Grid style={{marginLeft:"15px",marginTop:"10px"}} container spacing={3}>
             {investmentsLayout.map((card) => (
             <Grid item xs={12} sm={4} md={4} key={card.title}>
             <Card className="card-container">

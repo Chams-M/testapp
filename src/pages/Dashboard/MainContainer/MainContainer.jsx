@@ -10,7 +10,7 @@ function MainContainer (){
 
     return (
     <div>
-        <Grid style={{marginLeft:"15px",marginTop:"65px"}} container spacing={3}>
+        <Grid style={{marginLeft:"15px" ,marginTop:"10px"}} container spacing={3}>
             {dashboardLayout.map((card) => (
             <Grid item xs={12} sm={6} md={6} key={card.title}>
             <Card className="card-container">

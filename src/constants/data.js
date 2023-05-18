@@ -14,38 +14,38 @@
           id:1,
           icon :DashboardIcon,
           heading:"Dashboard",
-          route:"/dashboard"
+          path:"/dashboard"
       },
       {
           id:2,
           icon :AttachMoneyIcon,
           heading:"Investments",
-          route:"/investments"
+          path:"/investments"
       },
       {   id:3,
           icon :BusinessIcon,
           heading:"Service",
-          route:"/service"
+          path:"/service"
       },
       {   id:4,
           icon :MailIcon,
           heading:"Email Generator",
-          route:"/email_generator"
+          path:"/email_generator"
       },
       { id:5,
         icon :EngineeringIcon,
         heading:"Profile",
-        route:"/profile"
+        path:"/profile"
     },
     {   id:6,
         icon :PaymentIcon,
         heading:"Payment History",
-        route:"/payment_history"
+        path:"/payment_history"
     },
     {   id:7,
         icon :LogoutIcon,
         heading:"Logout",
-        route:"/logout"
+        path:"/logout"
     },
   
   ];
