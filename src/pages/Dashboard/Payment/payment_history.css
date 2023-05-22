@@ -1,0 +1,12 @@
+.user-payment-history-container{
+    background-color: #FFFFFF;
+    margin-left: 40px;
+    margin-top: 5%;
+    color:#0F1A24;
+    border-radius: 15px;
+}
+.payment-history-top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

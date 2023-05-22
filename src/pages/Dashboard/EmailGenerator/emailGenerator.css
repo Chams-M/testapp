@@ -1,0 +1,87 @@
+.email-genrator-container{
+    display: flex;
+    margin-left: 40px;
+    margin-top: 5%;
+    color:#0F1A24;
+    border-radius: 15px; 
+    flex-direction: row;
+    gap:20px;
+    margin-left: 40px;
+    margin-top: 5%;
+    color:#0F1A24;
+}
+.email-generator-box{
+background-color: #FFFFFF;
+height:800px;
+width:65%;
+border-radius: 15px;
+box-shadow: 10px 5px 5px rgba(200, 194, 194, 0.239);}
+
+.email-generator-details{
+    
+    background-color: #FFFFFF;
+    height:800px;
+    width:400px;
+    border-radius: 15px;
+    box-shadow: 10px 5px 5px rgba(200, 194, 194, 0.239);   
+}
+
+.email-generator-wrapper{
+    border: 1px solid rgba(135, 180, 224, 1);
+    max-height:max-content;
+    width:50vw;
+    
+}
+.email-generator-container{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+}
+.email-generated-text{
+    width: fit-content;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 28px;
+    padding: 10px;
+    padding-bottom: 10%;
+    font-style: normal;
+}
+
+.email-generator-btn{
+    display:flex;
+    flex-direction: row;
+    width: min-content;
+    gap:15px;
+    justify-content: flex-end;
+}
+.preview-email-container{
+    display: flex;
+    flex-direction: column;
+    gap:100px;
+    margin: auto;
+    width: max-content;
+}
+
+
+
+.email-details-container{
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:30px;
+}
+    
+.email-detail-label{
+    color:#5381AE;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 18px;
+
+} 
+
+.recorder-container{
+    display: flex;
+    flex-direction: row;
+    gap:20px;
+}

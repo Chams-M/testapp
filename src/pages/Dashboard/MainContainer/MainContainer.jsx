@@ -1,10 +1,8 @@
 import React from "react";
 import '../dashboard.css';
 import PerformanceSection from "../../../components/Dashboard/UserPerformance/performance_section";
-import { Box } from "@mui/material";
 import { Grid, Card, CardContent } from '@mui/material';
 import { dashboardLayout } from "../../../constants/dashboardLayout";
-
 
 function MainContainer (){
 
@@ -15,7 +13,7 @@ function MainContainer (){
             <Grid item xs={12} sm={6} md={6} key={card.title}>
             <Card className="card-container">
                 <CardContent>
-                <h2 className="card-title">{card.title}</h2>
+                <div className="card-title">{card.title}</div>
                 <p>{card.data}</p>
                 </CardContent>
             </Card>

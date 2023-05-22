@@ -29,8 +29,9 @@ function Heatmap() {
   return (
     <div>
       <CalendarHeatmap
-        startDate={shiftDate(today, -365)}
-        endDate={today}
+       startDate={shiftDate(today, -365)}
+       endDate={today}
+      
         values={data}
         classForValue={(value) => {
           if (!value) {

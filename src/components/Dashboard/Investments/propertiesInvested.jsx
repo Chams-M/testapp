@@ -18,17 +18,17 @@ return (
   
   <tr>
     <td className="property-type-label">House</td>
-    <td><ProgressBar color="#D0B5E9" value="30"/></td>
+    <td><ProgressBar color="#D0B5E9" value="30" height="15px" width="250px" label="120 properties" number="120"/></td>
   </tr>
   
   <tr>
     <td className="property-type-label">Land</td>
-    <td><ProgressBar color="#82D482" value="70" /></td>
+    <td><ProgressBar color="#82D482" value="70" height="15px" width="250px" label="120 properties" number="120" /></td>
   </tr>
   
   <tr>
     <td className="property-type-label">Villa</td>
-    <td><ProgressBar color="#F08F91" value="40" /></td>
+    <td><ProgressBar color="#F08F91" value="40"height="15px" width="250px" label="120 properties" number="120" /></td>
   </tr>
 </table>
     </div>

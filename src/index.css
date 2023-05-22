@@ -1,23 +1,17 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
-  font-weight: 400;
-
+  font-family: 'Inter', sans-serif;
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+
 }
 
 @font-face {
   font-family: "InterMedium";
   src: local("InterMedium"),
    url("./fonts/Inter/Inter-Medium.ttf") format("truetype");
-  font-weight: bold;
+  font-weight: 500;
   }
 
   @font-face {
@@ -33,7 +27,6 @@
        url("./fonts/Inter/Inter-Bold.ttf") format("truetype");
       font-weight: bold;
       }
-
 
 
 a {
@@ -68,6 +61,7 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #646cff;
 }
@@ -123,3 +117,80 @@ margin-top:0px;
 .MuiPaper-root.css-bhp9pd-MuiPaper-root-MuiCard-root{
 border-radius: 12px;
 }
+
+
+.MuiTypography-root.MuiListItemText-primary{
+  font-weight: 300;
+  font-size: 15px;
+}
+.MuiTypography-root.MuiListItemText-secondary{
+  font-weight: 300;
+  font-size: 13px;
+}
+
+
+              /***** Profile Section******/
+
+
+
+.MuiButtonBase-root.MuiTab-textColorPrimary.Mui-selected{
+  color: #6596C8;
+}
+.MuiTabs-indicator.MuiTabs-indicator{
+  color: #c865c3;
+}
+.MuiTabs-flexContainer.MuiTabs-centered.MuiTabs-flexContainer.MuiButtonBase-root{
+  width:255px;
+}
+.MuiButtonBase-root.MuiTab-root.MuiTab-textColorPrimary{
+  color:#555C64;
+  font-family: 'Inter', sans-serif;
+  text-transform: none;
+  font-size: 16px;
+  font-weight: 300;
+  
+}
+.MuiButtonBase-root.MuiTab-root.MuiTab-textColorPrimary.Mui-selected{
+  color: #6596C8;
+}
+.MuiTabs-indicator.MuiTabs-indicator{
+  background-color: #6596C8;
+}
+
+/*  thiiiis */
+
+/*.MuiButtonBase-root.MuiTab-root{
+  width:255px;
+  
+}*/
+/*.MuiTouchRipple-root.css-8je8zh-MuiTouchRipple-root{
+  border: 1px solid #1a1a1a;
+}*/
+
+
+
+
+.css-1rekzbk-MuiButtonBase-root-MuiButton-root:hover {
+background-color: red;
+}
+.MuiTabs-flexContainer.MuiTabs-centered.MuiButtonBase-root.MuiTab-root.css-1wf8b0h-MuiTabs-flexContainer.MuiButtonBase-root.MuiTab-root{
+  width:255px;
+}
+
+
+
+.css-1gpke0k-MuiButtonBase-root-MuiButton-root:hover{
+  background-color: #c865c3;
+}
+
+.MuiButtonBase-root.MuiButton-root{
+  text-transform: none;
+  min-width: fit-content;
+  font-size: 14px;
+}
+.MuiButtonBase-root.MuiButton-root:focus{
+outline: none;
+}
+
+          /****************** Email Generator **********/
+

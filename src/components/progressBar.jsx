@@ -7,8 +7,8 @@ import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgr
 
 export default function ProgressBar(props) {
     const BorderLinearProgress = styled(LinearProgress)(({theme}) => ({
-        height: 15,
-        width:250,
+        height: props.height,
+        width:props.width,
         borderRadius: 8,
         [`&.${linearProgressClasses.colorPrimary}`]: {
           backgroundColor: theme.palette.grey[theme.palette.mode === 'light' ? 200 : 800],
@@ -21,8 +21,8 @@ export default function ProgressBar(props) {
   return (
     <div className='properties-invested-card'>
     <div className='progressbar-data'>
-    <div>120 properties</div>
-    <div>250</div>
+    <div>{props.label}</div>
+    <div>{props.number}</div>
     </div>
     <Box sx={{ flexGrow: 1 }}>
       <BorderLinearProgress variant="determinate" value={props.value}   />

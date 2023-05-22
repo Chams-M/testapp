@@ -8,7 +8,8 @@ export const GroupBarChart= ({barLabels,barColors,cardLabel}) => {
         return<text x={x + width / 2} 
         y={y}
         fill="#3D5D7E"
-        fontWeight={500}
+        fontWeight={300}
+        fontSize={13}
         textAnchor="middle"
         dy={-6}>{`${value}\n${cardLabel}`}
         </text>
@@ -31,7 +32,7 @@ export const GroupBarChart= ({barLabels,barColors,cardLabel}) => {
       ];
 return (
 <div className="views-chart">
-<BarChart width={300} height={200} data={chartData}>
+<BarChart width={300} height={180} data={chartData}>
   <XAxis dataKey="name"/>
   <Tooltip />
   <Bar dataKey="sales"

@@ -17,8 +17,9 @@ return (
     </div>
     <div 
     style={{
-        marginLeft:'40px',
+        marginLeft:'45px',
         fontWeight:'300',
+        fontSize:"15px"
     }}
     >Out of 1,2345 properties</div>
     </div>

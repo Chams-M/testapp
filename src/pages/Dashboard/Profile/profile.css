@@ -1,0 +1,116 @@
+.profile-container{
+    display: flex;
+    flex-direction: column;
+    margin-left: 12vh;
+    margin-top: 2vh;
+}
+.profile-settings-btn{
+    display:flex;
+    flex-direction: row;
+    text-align: center;
+    gap:15px;
+    margin-top: 100px;
+    margin-left: 20%;
+}
+
+#profile-btn-save:hover{
+    background-color: #C3A3B1;
+}
+#profile-btn-cancel:hover{
+    background-color: #fcf4f4;
+}
+
+
+                    /******* Experience *******/
+
+.profile-experience-container{
+    display: flex;
+    flex-direction: column;
+    margin-left: 5vh;
+    margin-top: 2vh;
+}
+
+
+.experience-description-title{
+font-weight: 400;
+font-size: 16px;
+
+}
+
+.user-experience-description{
+    font-weight: 300;
+    color:#555C64;
+}
+.user-social-media{
+    display: flex;
+    flex-direction: row;
+    gap:80px;
+    padding-top: 40px;
+}
+.user-social-media span{
+    margin-left: 10px;
+    
+}
+.user-social-media-item{
+    display: flex;
+    flex-direction: column;
+}
+.user-social-media-item span{
+    font-weight: 300;
+    font-size: 15px;
+    color:#0F1A24;
+}
+
+.experience{
+    width:500px;
+    height:40px;
+}
+.profile-add-btn{
+    margin-top: 10px;
+    background-color: #EEF6FE;
+    font-weight: 300;
+    font-size: 15px;
+    border-radius:3px;
+    
+}
+.resume{
+    width:250px;
+    height:40px;
+}
+#profile-experience-btn-label{
+    padding: 8px 0px 10px 30px;
+    color: #464F56;
+    font-size: 14px;
+    font-weight: 300;
+    text-align: center;
+}
+
+
+                    /******* Notifications **********/
+                    
+
+.notifications-day{
+    display: flex;
+    justify-content: center;
+    color: white;
+    background-color: #C3A3B1;
+    font-weight: 300;
+    font-size: 14px;
+    height:40px;
+    width:110px;
+    border-radius: 2px;
+    align-items: center;
+}
+.notifications-day span{
+text-align: center;
+}
+.day-divider{
+    margin-top: 30px;
+}
+#notifications-list-title{
+    font-weight: 300;
+    font-size: 10px; 
+    font-family: 'Inter';
+    color: #0F1A24;
+    
+}

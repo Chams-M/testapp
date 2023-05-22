@@ -10,7 +10,7 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import Image from '../../assets/images/chamsmoumni.jpg'
+import Image from '../../assets/images/user-image.jpeg'
 import './dashboard.css';
 import { Logo } from '../../assets/svg/Logo';
 import { NotificationsIcon } from '../../assets/svg/NotificationsIcon';
@@ -78,7 +78,7 @@ function Navbar() {
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
               <Avatar alt="Remy Sharp" src={Image}/>
-              <span className='userName'>Chams Moumni</span>
+              <span className='userName'>Mark Smith</span>
               <IconButton>
                   <KeyboardArrowDownIcon sx={{
                     color:'#7B5D6B'

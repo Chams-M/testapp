@@ -1,61 +1,59 @@
-  import DashboardIcon from '@mui/icons-material/Dashboard';
-  import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
-  import BusinessIcon from '@mui/icons-material/Business';
-  import MailIcon from '@mui/icons-material/Mail';
-  import EngineeringIcon from '@mui/icons-material/Engineering';
-  import PaymentIcon from '@mui/icons-material/Payment';
-  import LogoutIcon from '@mui/icons-material/Logout';
-  import WbSunnyIcon from '@mui/icons-material/WbSunny';
-  import CircleIcon from '@mui/icons-material/Circle';
+import DashboardIcon from "@mui/icons-material/Dashboard";
+import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
+import BusinessIcon from "@mui/icons-material/Business";
+import MailIcon from "@mui/icons-material/Mail";
+import EngineeringIcon from "@mui/icons-material/Engineering";
+import PaymentIcon from "@mui/icons-material/Payment";
+import LogoutIcon from "@mui/icons-material/Logout";
+import WbSunnyIcon from "@mui/icons-material/WbSunny";
+import CircleIcon from "@mui/icons-material/Circle";
+import { AuthorizedPaths } from "../navigation/paths";
+//  todo naming ex: items
+export const SidebarData = [
+  {
+    id: 1,
+    icon: DashboardIcon,
+    heading: "Dashboard",
+    path: AuthorizedPaths.home,
+  },
+  {
+    id: 2,
+    icon: AttachMoneyIcon,
+    heading: "Investments",
+    path: AuthorizedPaths.investments,
+  },
+  {
+    id: 3,
+    icon: BusinessIcon,
+    heading: "Service",
+    path: AuthorizedPaths.service,
+  },
+  {
+    id: 4,
+    icon: MailIcon,
+    heading: "Email Generator",
+    path: AuthorizedPaths.emailGenerator,
+  },
+  {
+    id: 5,
+    icon: EngineeringIcon,
+    heading: "Profile",
+    path: AuthorizedPaths.profile,
+  },
+  {
+    id: 6,
+    icon: PaymentIcon,
+    heading: "Payment History",
+    path: AuthorizedPaths.paymentHistory,
+  },
+  { id: 7, icon: LogoutIcon, heading: "Logout", path: "/logout" },
+];
 
-  export const SidebarData = [
+export const themeToggle = [
+  {
+    light: WbSunnyIcon,
+    dark: CircleIcon,
+  },
+];
 
-      {
-          id:1,
-          icon :DashboardIcon,
-          heading:"Dashboard",
-          path:"/dashboard"
-      },
-      {
-          id:2,
-          icon :AttachMoneyIcon,
-          heading:"Investments",
-          path:"/investments"
-      },
-      {   id:3,
-          icon :BusinessIcon,
-          heading:"Service",
-          path:"/service"
-      },
-      {   id:4,
-          icon :MailIcon,
-          heading:"Email Generator",
-          path:"/email_generator"
-      },
-      { id:5,
-        icon :EngineeringIcon,
-        heading:"Profile",
-        path:"/profile"
-    },
-    {   id:6,
-        icon :PaymentIcon,
-        heading:"Payment History",
-        path:"/payment_history"
-    },
-    {   id:7,
-        icon :LogoutIcon,
-        heading:"Logout",
-        path:"/logout"
-    },
-  
-  ];
-
-export const themeToggle=[
-{
-    light:WbSunnyIcon,
-    dark:CircleIcon,
-}
-]
-  
-  //user Data
-  
+//user Data

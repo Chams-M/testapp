@@ -28,7 +28,7 @@ function InvestmentsContainer (){
             <Grid item xs={12} sm={4} md={4} key={card.title}>
             <Card className="card-container">
                 <CardContent>
-                <h2 className="card-title">{card.title}</h2>
+                <div className="card-title">{card.title}</div>
                 <p>{card.data}</p>
                 </CardContent>
             </Card>
@@ -44,6 +44,7 @@ function InvestmentsContainer (){
 <div className="list-container">
 <DashboardList rows={rows} columns={columns} label={"Favorites"}/>
 </div>
+<br></br><br></br>
 </div>
     );
 }
