@@ -1,6 +1,6 @@
 import React from "react";
 import "./profile.css";
-import "../../../auth.css";
+import "../../../pages/Authentification/auth.css";
 import CancelButton from "../../../components/buttons/cancelButton.jsx";
 import SaveButton from "../../../components/buttons/saveButton.jsx";
 import { Divider } from "@mui/material";

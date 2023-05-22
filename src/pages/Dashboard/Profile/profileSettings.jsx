@@ -4,7 +4,7 @@ import EmailIcon from "@mui/icons-material/Email";
 import * as Components from "../../../components/styled-components/Components.js";
 import "./profile.css";
 import { TextField } from "@mui/material";
-import "../../../auth.css";
+import "../../../pages/Authentification/auth.css";
 import CancelButton from "../../../components/buttons/cancelButton.jsx";
 import SaveButton from "../../../components/buttons/saveButton.jsx";
 

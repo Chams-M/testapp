@@ -1,6 +1,6 @@
 import React from "react";
 import InputAdornment from '@mui/material/InputAdornment';
-import * as Components from "./components/styled-components/Components.js";
+import * as Components from "../../components/styled-components/Components.js";
 import "./auth.css";
 
 import {

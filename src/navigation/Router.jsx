@@ -6,7 +6,7 @@ import DashboardLayout from "../layouts/Dashboard/dashboard-layout";
 import PropertiesLayout from "../layouts/PropertiesLayout";
 import MainContainer from "../pages/Dashboard/MainContainer/MainContainer";
 import Page404 from "../pages/Page404";
-import Auth from "../Auth";
+import Auth from "../pages/Authentification/Auth";
 import ServiceContainer from "../pages/Dashboard/Service/serviceContainer";
 import InvestmentsContainer from "../pages/Dashboard/Investments/investmentsContainer";
 import ProfileContainer from "../pages/Dashboard/Profile/profileContainer";
@@ -47,7 +47,7 @@ export default function Router() {
       path: CommonPaths.authPrefix,
       element: (
         <GuestGuard>
-          <Auth />
+          <Auth/>
         </GuestGuard>
       ),
     },
