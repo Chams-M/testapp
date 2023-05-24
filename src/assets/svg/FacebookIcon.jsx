@@ -1,5 +1,5 @@
 import * as React from "react"
-export const FacebookIcon = (props) => (
+const FacebookIcon = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -27,3 +27,4 @@ export const FacebookIcon = (props) => (
     </defs>
   </svg>
 )
+export default FacebookIcon ;

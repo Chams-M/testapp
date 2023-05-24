@@ -12,7 +12,7 @@ import InvestmentsContainer from "../pages/Dashboard/Investments/investmentsCont
 import ProfileContainer from "../pages/Dashboard/Profile/profileContainer";
 import EmailGenerator from "../pages/Dashboard/EmailGenerator/emailGenerator";
 import PaymentHistory from "../pages/Dashboard/Payment/PaymentHistory";
-import Properties from "../pages/Properties";
+import Properties from "../pages/HomePage/Properties";
 
 export default function Router() {
   return useRoutes([

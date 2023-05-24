@@ -3,25 +3,30 @@ import "./profile.css";
 import "../../../pages/Authentification/auth.css";
 import CancelButton from "../../../components/buttons/cancelButton.jsx";
 import SaveButton from "../../../components/buttons/saveButton.jsx";
-import { Divider } from "@mui/material";
-import { FacebookIcon } from "../../../assets/svg/FacebookIcon";
+import { Button, Divider } from "@mui/material";
+import  FacebookIcon  from "../../../assets/svg/FacebookIcon";
 import { TwitterIcon } from "../../../assets/svg/TwitterIcon";
 import { LinkedinIcon } from "../../../assets/svg/LinkedinIcon";
 import { TextField } from "@mui/material";
-
+import AddIcon from "../../../assets/svg/AddIcon";
 import UploadIcon from "@mui/icons-material/Upload";
 import LinkIcon from "@mui/icons-material/Link";
 import AddCircleIcon from "@mui/icons-material/AddCircle";
 
 export default function ProfileExperience() {
+  function imClicked(){
+    console.log("i'm clickeeeed");
+  }
+
   return (
+    <div>
     <div className="profile-experience-container">
       <span className="experience-description-title"> Description </span>
-      <p className="user-experience-description">
+      <div className="user-experience-description">
         Lorem ipsum dolor sit amet consectetur. Fermentum amet purus dolor
         aliquam sed ornare urna nisi. Turpis feugiat vitae amet purus turpis
         orci dignissim. Convallis magna sagittis amet commodo.{" "}
-      </p>
+      </div>
       <div>Tags</div>
       <Divider
         sx={{
@@ -82,34 +87,59 @@ export default function ProfileExperience() {
         </div>
       </div>
       <br></br>
-      <div className="profile-add-btn experience">
-        <p id="profile-btn-label">
-          Add Experience
-          <AddCircleIcon
-            sx={{ height: "20px", width: "20px", marginLeft: "330px" }}
-          />
-        </p>
+      <div className="add-btns">
+      <div>
+      <Button
+      id="add-experience-btn"
+      variant="contained"
+      endIcon={<AddIcon
+        sx={{marginLeft: "100px" }}
+      />}
+      sx={{
+        backgroundColor: "#EEF6FE",
+        color: "#464F56",
+        fontSize: "10px",
+        width: "500px",
+       
+        fontFamily: "sans-serif",
+      }}
+      >
+        <span id="profile-btn-label">Add Experience</span>
+      </Button>
       </div>
-      <br></br>
-      <div className="profile-add-btn resume">
-        <p id="profile-experience-btn-label">
-          Add Resume
-          <UploadIcon
-            sx={{ height: "20px", width: "20px", marginLeft: "80px" }}
-          />
-          <LinkIcon sx={{ height: "20px", width: "20px" }} />
-        </p>
+      <Button
+      id="add-experience-btn"
+      variant="contained"
+      endIcon={<UploadIcon
+      />}
+      sx={{
+        backgroundColor: "#EEF6FE",
+        color: "#464F56",
+        fontSize: "10px",
+        width: "300px",
+        fontFamily: "sans-serif",
+      }}
+      >
+        <span id="profile-btn-label">Add Resume</span>
+      </Button>
       </div>
-
-      <div className="profile-btn">
-        <SaveButton text="Save" color="#9E7889" width="150px" height="50px" />
+      
+    </div>
+    <div className="profile-settings-btn">
+      <SaveButton
+          action={imClicked}
+          text="Save"
+          width="150px"
+          height="50px"
+        />
         <CancelButton
+          action={imClicked}
           text="Cancel"
           id="profile-btn"
           width="150px"
           height="50px"
         />
       </div>
-    </div>
+      </div>
   );
 }

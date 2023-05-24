@@ -8,8 +8,7 @@ import LogoutIcon from "@mui/icons-material/Logout";
 import WbSunnyIcon from "@mui/icons-material/WbSunny";
 import CircleIcon from "@mui/icons-material/Circle";
 import { AuthorizedPaths } from "../navigation/paths";
-//  todo naming ex: items
-export const SidebarData = [
+export const SidebarItems = [
   {
     id: 1,
     icon: DashboardIcon,
@@ -55,5 +54,3 @@ export const themeToggle = [
     dark: CircleIcon,
   },
 ];
-
-//user Data

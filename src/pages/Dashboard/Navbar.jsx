@@ -14,7 +14,6 @@ import Image from '../../assets/images/user-image.jpeg'
 import './dashboard.css';
 import { Logo } from '../../assets/svg/Logo';
 import { NotificationsIcon } from '../../assets/svg/NotificationsIcon';
-//import NotificationsIcon from '@mui/icons-material/Notifications';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 const pages = ['Buy','Sell','Invest','About','Dashboard'];
