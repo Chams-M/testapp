@@ -14,6 +14,7 @@ import {
 {
   /******** Icons ********/
 }
+// add name / value / onChange = handleChange / validationSchema (Yup)
 
 import  GoogleIcon  from "../../assets/svg/GoogleIcon.jsx";
 import  FacebookIcon from "../../assets/svg/FacebookIcon.jsx";
@@ -34,12 +35,18 @@ function Auth() {
       email: "",
       phoneNumber: "",
     },
+    //validation
     onSubmit: (values) => {
       alert(JSON.stringify(values, null, 2));
+      //const response= await createAccount()
       //or console.log("onSubmit" , values)
     },
   });
 
+  // axiosInstance
+//const AxiosInstance 
+
+// Redux
   function imClicked() {
     console.log("i'm clickeeeed");
   }
@@ -92,6 +99,7 @@ function Auth() {
                 <Components.FormContainer>
                   <Components.FormLabel>First Name</Components.FormLabel>
                   <TextField
+                  //add names 
                     onChange={formik.handleChange}
                     value={formik.values.firstName}
                     sx={{
