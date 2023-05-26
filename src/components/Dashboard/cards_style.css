@@ -32,7 +32,9 @@ margin-right:10px;
 
 /********** Profile Viewers Card *********/ 
 .views-chart{
-width:50%;
+    display: flex;
+    justify-content: center;
+    
 }
 
 
@@ -112,6 +114,11 @@ margin: 20px;
     flex-direction: row;
 }
 
+.get-seller-dashboard-btn{
+display:flex;
+justify-content: center;
+}
+
 #get-seller-dashboard-btn:hover{
 background-color: rgba(210, 183, 235, 1);
 }
@@ -129,6 +136,11 @@ background-color: rgba(210, 183, 235, 1);
 .properties-invested-card{
     margin-left: 10px;
     padding-bottom: 20px;
+}
+.properties-invested-data{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
 }
 .property-type-label{
     font-weight: 500;

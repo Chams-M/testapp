@@ -11,10 +11,10 @@ export default function SellInvestments(){
 return (
     
     <div className="sellinvestments-content">
-       <p>
+       <div sx={{fontWeight:"200" , fontSize:"15px"}}>
        Lorem ipsum dolor sit amet consectetur
-       </p>
-       <div>
+       </div>
+       <div className="get-seller-dashboard-btn">
        <Button
        id="get-seller-dashboard-btn"
        variant="contained"

@@ -3,7 +3,7 @@ import '../../Dashboard/dashboard.css';
 import { Grid, Card, CardContent } from '@mui/material';
 import { investmentsLayout } from "../../../constants/investmentsLayout";
 import DashboardList from "../../../components/Dashboard/dashboardList";
-import SimpleSlider from "../../../components/carousel";
+import SimpleSlider from "../../../components/carousel/carousel";
 
 const rows = [
     { id: 1, col1: 'House', col2: 'Jamaica, New York' ,col3:'13/02/2023 8:25PM', col4:'$ 1.500.00', col5:'$ 1.750.00',col6:'Pending' },
@@ -39,14 +39,16 @@ function InvestmentsContainer (){
 {/* <SimpleSlider/>*/}
 {/* change it to have dynamic size of rows and columns */}
 <DashboardList rows={rows} columns={columns} label={"Properties"}/>
-
 </div>
+
+{/* favorites list */}
 <div className="list-container">
-<DashboardList rows={rows} columns={columns} label={"Favorites"}/>
+<SimpleSlider/>
 </div>
 <br></br><br></br>
 </div>
-    );
+);
 }
+
 
 export default InvestmentsContainer;

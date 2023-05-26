@@ -8,7 +8,7 @@ import ProgressBar from "../../progressBar";
 export default function PropertiesInvested(){
 return (
     <div className="properties-invested-card">
-    <div>
+    <div className="properties-invested-data">
     <table>
   <tr>
     <th></th>

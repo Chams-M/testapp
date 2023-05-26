@@ -20,7 +20,7 @@ export default function ProfileViewers(){
       
 return (
 <div className="views-chart">
-<BarChart width={500} height={250} data={chartData} >
+<BarChart width={500} height={230} data={chartData} >
   <CartesianGrid opacity={0}   
     />
   <XAxis dataKey="name" />
