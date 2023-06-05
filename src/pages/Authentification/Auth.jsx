@@ -62,8 +62,6 @@ function Auth() {
   console.log(values);
   return true;
   });
-  
-
   const formik = useFormik({
     initialValues: {
       firstName: "",
@@ -80,16 +78,13 @@ function Auth() {
      onSubmit,
      validationSchema:validationSchema,
   });
-
 // axiosInstance
 //const AxiosInstance 
 // Redux
-
 function imClicked() {
     console.log("i'm clickeeeed");
   }
-
-  return (
+return (
     <Components.Container>
       {/************  SignUp Form *********/}
       <Components.SignUpContainer signinIn={signIn}>
@@ -148,9 +143,7 @@ function imClicked() {
                     variant="standard"
                     required
                   />
-                  
                 </Components.FormContainer>
-
                 <Components.FormContainer>
                   <Components.FormLabel>Last Name</Components.FormLabel>
                   <TextField
@@ -169,7 +162,6 @@ function imClicked() {
 
                 <Components.FormContainer>
                   <Components.FormLabel>Date of Birth</Components.FormLabel>
-
                   <TextField
                     name="dateofBirth"
                     onChange={formik.handleChange}
