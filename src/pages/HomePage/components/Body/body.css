@@ -1,0 +1,86 @@
+.body-container{
+    margin-top: 5%;
+    display: flex;
+   flex-direction: column;
+   
+}
+.why-propown-section{
+    background-color: rgba(238, 246, 254, 1);
+    padding:60px;
+}
+.why-propown{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    margin-left: 5%;
+    
+}
+.why-propown-heading{
+        color:#5381AE;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 30px;
+        margin-bottom: 20px;
+        margin-left: 5%;
+}
+.why-propown-label{
+    color:rgba(61, 93, 126, 1);
+font-style: normal;
+font-weight: 400;
+font-size: 22px;
+}
+.why-propown-card{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    background-color: #FFFFFF;
+    height: 260px;
+    width: 280px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.06);
+    border-radius: 6px;
+    padding: 30px;
+}
+
+
+
+
+.invest-with-service-section{
+display: flex;
+flex-direction: row;
+gap: 20px;
+margin-top:10% ;
+padding: 20px;
+justify-content: center;
+}
+.invest-image-div{
+width: 600px;
+height: 500px;
+}
+#invest-image{
+width: 100%;
+height: 100%;
+}
+.invest-text{ 
+text-align: center;
+padding: 50px;
+width: 500px;
+height: 400px;
+background: linear-gradient(125.03deg, rgba(238, 246, 254, 0.26) 1.39%, #EEF6FE 99.19%);
+border-radius: 0px 8px 8px 0px;
+margin-bottom: 50px;
+}
+#invest-title{
+justify-content: center;
+color: rgba(101, 150, 200, 1);
+font-style: normal;
+font-weight: 500;
+font-size: 32px;
+}
+#invest-paragraph{
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 208%;
+text-align: center;
+}

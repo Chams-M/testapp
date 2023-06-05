@@ -13,12 +13,13 @@ import ProfileContainer from "../pages/Dashboard/Profile/profileContainer";
 import EmailGenerator from "../pages/Dashboard/EmailGenerator/emailGenerator";
 import PaymentHistory from "../pages/Dashboard/Payment/PaymentHistory";
 import Properties from "../pages/HomePage/Properties";
+import HomePage from "../pages/HomePage/HomePage";
 
 export default function Router() {
   return useRoutes([
     {
       path: CommonPaths.Home,
-      element: <>home</>,
+      element: <HomePage/>,
     },
     {
       path: UnauthorizedPaths.properties,

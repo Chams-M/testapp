@@ -1,8 +1,8 @@
-import React from "react";
+import React , {useState} from "react";
 import InputAdornment from "@mui/material/InputAdornment";
 import * as Components from "../../components/styled-components/Components.js";
 import "./auth.css";
-
+import SaveButton from "../../components/buttons/saveButton.jsx"
 import {
   Button,
   Checkbox,
@@ -20,11 +20,49 @@ import  GoogleIcon  from "../../assets/svg/GoogleIcon.jsx";
 import  FacebookIcon from "../../assets/svg/FacebookIcon.jsx";
 import EmailIcon from "@mui/icons-material/Email";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
-import { DateCalendar } from "@mui/x-date-pickers";
 import { useFormik } from "formik";
+import { Save } from "@mui/icons-material";
+import * as Yup from "yup";
 
 function Auth() {
+  const PASSWORD_REGEX = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/;
   const [signIn, toggle] = React.useState(true);
+  // const { switchToSignin } = useContext(AccountContext);
+   const [success, setSuccess] = useState(null);
+   const [error, setError] = useState(null);
+    const onSubmit= async(values)=>{
+      const {confirmPassword,...data} = values;
+        const response = await  axios.post("https://localhost:9000/auth/register",data).catch((err)=>{
+          if (err && err.response)
+          console.log("errrrrror",err);
+        });
+        if (response && response.data)
+    {
+      setError(null);
+      setSuccess(response.data.message);
+      formik.resetForm();
+    }
+  }
+
+  const validationSchema = Yup.object().shape({
+    firstName: Yup.string().required('First name is required'),
+    lastName: Yup.string().required('Last name is required'),
+    occupation: Yup.string().required('Occupation is required'),
+    dateOfBirth: Yup.date()
+      .required('Date of birth is required')
+      .max(new Date(), 'Date of birth cannot be in the future'),
+    location: Yup.string().required('Location is required'),
+    email: Yup.string().email('Invalid email').required('Email is required'),
+    phoneNumber: Yup.string().required('Phone number is required'),
+    password: Yup.string().required('Password is required').min(8, 'Password must be at least 8 characters'),
+    confirmPassword: Yup.string()
+    .required('Confirm password is required')
+    .oneOf([Yup.ref('password')], 'Passwords must match'),
+}).test('console-log', 'Submitted object:', function (values) {
+  console.log(values);
+  return true;
+  });
+  
 
   const formik = useFormik({
     initialValues: {
@@ -32,22 +70,22 @@ function Auth() {
       lastName: "",
       occupation: "",
       dateofBirth: "",
+      location: "",
       email: "",
       phoneNumber: "",
+      password:"",
+      confirmPassword:""
     },
     //validation
-    onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
-      //const response= await createAccount()
-      //or console.log("onSubmit" , values)
-    },
+     onSubmit,
+     validationSchema:validationSchema,
   });
 
-  // axiosInstance
+// axiosInstance
 //const AxiosInstance 
-
 // Redux
-  function imClicked() {
+
+function imClicked() {
     console.log("i'm clickeeeed");
   }
 
@@ -66,7 +104,7 @@ function Auth() {
                 your portfolio!
               </Components.Paragraph>
               <Components.ButtonContainer>
-                <Button
+              <Button
                   onClick={imClicked}
                   sx={{
                     color: "#9E7889",
@@ -76,7 +114,7 @@ function Auth() {
                   variant="outlined"
                   startIcon={<GoogleIcon />}
                 >
-                  Sign In with Google
+                Sign Up with Google
                 </Button>
                 <Button
                   onClick={imClicked}
@@ -88,7 +126,7 @@ function Auth() {
                   variant="outlined"
                   startIcon={<FacebookIcon />}
                 >
-                  Signin with Facebook
+                  Sign Up with Facebook
                 </Button>
               </Components.ButtonContainer>
             </Components.UpperContainer>
@@ -100,27 +138,29 @@ function Auth() {
                   <Components.FormLabel>First Name</Components.FormLabel>
                   <TextField
                   //add names 
+                    name="firstName"
                     onChange={formik.handleChange}
                     value={formik.values.firstName}
                     sx={{
                       width: "200px",
                     }}
-                    id="standard-basic"
                     placeholder="First Name"
                     variant="standard"
                     required
                   />
+                  
                 </Components.FormContainer>
 
                 <Components.FormContainer>
                   <Components.FormLabel>Last Name</Components.FormLabel>
                   <TextField
+                    name="lastName"
                     onChange={formik.handleChange}
-                    value={formik.values.firstName}
+                    value={formik.values.lastName}
                     sx={{
                       width: "200px",
                     }}
-                    id="standard-basic"
+                   
                     placeholder="Last Name"
                     variant="standard"
                     required
@@ -131,12 +171,12 @@ function Auth() {
                   <Components.FormLabel>Date of Birth</Components.FormLabel>
 
                   <TextField
+                    name="dateofBirth"
                     onChange={formik.handleChange}
-                    value={formik.values.firstName}
+                    value={formik.values.dateofBirth}
                     sx={{
                       width: "200px",
                     }}
-                    id="standard-basic"
                     placeholder="DD/MM/YY"
                     variant="standard"
                     required
@@ -146,12 +186,13 @@ function Auth() {
                 <Components.FormContainer>
                   <Components.FormLabel>Occupation</Components.FormLabel>
                   <TextField
+                    name="occupation"
                     onChange={formik.handleChange}
-                    value={formik.values.firstName}
+                    value={formik.values.occupation}
                     sx={{
                       width: "200px",
                     }}
-                    id="standard-basic"
+                   
                     placeholder="Select occupation"
                     variant="standard"
                     required
@@ -162,7 +203,9 @@ function Auth() {
 
               <Components.FormLabel>Email</Components.FormLabel>
               <TextField
-                id="input-with-icon-textfield"
+                name="email"
+                onChange={formik.handleChange}
+                value={formik.values.email}
                 placeholder="Enter your email"
                 InputProps={{
                   startAdornment: (
@@ -179,12 +222,13 @@ function Auth() {
                 <Components.FormContainer>
                   <Components.FormLabel>City,Country</Components.FormLabel>
                   <TextField
+                   name="location"
                     onChange={formik.handleChange}
-                    value={formik.values.firstName}
+                    value={formik.values.location}
                     sx={{
                       width: "200px",
                     }}
-                    id="standard-basic"
+                    
                     placeholder="Select city,country"
                     variant="standard"
                     required
@@ -194,12 +238,13 @@ function Auth() {
                 <Components.FormContainer>
                   <Components.FormLabel>Phone Number</Components.FormLabel>
                   <TextField
+                    name="phoneNumber"
                     onChange={formik.handleChange}
-                    value={formik.values.firstName}
+                    value={formik.values.phoneNumber}
                     sx={{
                       width: "200px",
                     }}
-                    id="standard-basic"
+                    
                     placeholder="+000 | Enter your number"
                     variant="standard"
                     required
@@ -209,9 +254,10 @@ function Auth() {
                 <Components.FormContainer>
                   <Components.FormLabel>Password</Components.FormLabel>
                   <TextField
+                    name="password"
                     onChange={formik.handleChange}
-                    value={formik.values.firstName}
-                    id="input-with-icon-textfield"
+                    value={formik.values.password}
+                  
                     placeholder="Enter your password"
                     type="password"
                     InputProps={{
@@ -228,9 +274,10 @@ function Auth() {
                 <Components.FormContainer>
                   <Components.FormLabel>Confirm Password</Components.FormLabel>
                   <TextField
+                    name="confirmPassword"
                     onChange={formik.handleChange}
-                    value={formik.values.firstName}
-                    id="input-with-icon-textfield"
+                    value={formik.values.confirmPassword}
+                   
                     placeholder="Enter your password"
                     type="password"
                     InputProps={{
@@ -279,10 +326,12 @@ function Auth() {
             </Components.AgreeContainer>
 
             {/*---------  Sign Up Button --------- */}
-
+               
             <Components.Button>Sign Up</Components.Button>
           </Components.SignupContent>
+         
         </form>
+
       </Components.SignUpContainer>
 
       {/********* Login Form ********/}
@@ -320,13 +369,13 @@ function Auth() {
         </Components.UpperContainer>
 
         {/****** Start Form *****/}
-        <form onSubmit={formik.handleSubmit}>
+        <form onSubmit={formik.onSubmit}>
           <Components.Form>
             <p className="formlabel">Email</p>
             <TextField
               onChange={formik.handleChange}
-              value={formik.values.firstName}
-              id="input-with-icon-textfield"
+              value={formik.values.email}
+              
               placeholder="Enter your email"
               InputProps={{
                 startAdornment: (
@@ -343,8 +392,7 @@ function Auth() {
             <p className="formlabel">Password</p>
             <TextField
               onChange={formik.handleChange}
-              value={formik.values.firstName}
-              id="input-with-icon-textfield"
+              value={formik.values.password}
               placeholder="Enter your password"
               type="password"
               InputProps={{
@@ -402,5 +450,4 @@ function Auth() {
     </Components.Container>
   );
 }
-
 export default Auth;

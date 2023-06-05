@@ -1,0 +1,85 @@
+body{
+    background-color: #F5F5F5;
+}
+.homepage-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+/********** AppBar Style *********/
+
+.logo{
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+.navbar-container{
+    padding: 10px;
+}
+
+#myhomeAppBar{
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    box-shadow: none;
+}
+.rightside-appbar{
+    margin-left: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.leftside-appbar{
+    
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+#appbar-item{
+    color:#7B5D6B;
+}
+#appbar-item:hover{
+    background-color: #7b5d6b1a;
+}
+
+@media screen and (max-width: 768px) {
+    .Appbar {
+      flex-direction: column; /* Stacks the child divs vertically */
+      height: auto; /* Automatically adjusts the height based on content */
+    }
+}
+
+.main-container{
+    height: 100vh;
+    width:80vw;
+    position: absolute;
+    margin-left: 95%;
+    
+}
+
+.userName{
+    color: #7B5D6B;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left:10px;
+}
+
+.notifications-icon{
+    color: #7B5D6B;
+}
+.card-container{
+    height:300px;
+    width:95%;
+    border-radius: 200px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+#card-content{
+    border-radius: 20px;
+}
+.card-title{
+    color:#3D5D7E;
+    /* font-weight: 500; */
+    font-size: 18px;
+    font-family: 'InterThin', sans-serif;
+}

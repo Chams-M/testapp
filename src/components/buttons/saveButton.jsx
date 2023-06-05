@@ -1,13 +1,12 @@
 import React from "react";
 import { Button } from "@mui/material";
-import { createTheme , ThemeProvider} from '@mui/material/styles';
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 const theme = createTheme({
   status: {
-    cancel: '#9E7889',
+    cancel: "#9E7889",
   },
-  }
-);
+});
 
 export default function SaveButton(props) {
   return (
